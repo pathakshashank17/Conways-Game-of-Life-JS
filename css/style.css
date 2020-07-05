@@ -1,0 +1,22 @@
+#game-area {
+    margin-top: 2rem;
+    border: 3px solid white;
+    max-width: 500px;
+}
+
+.col-1 {
+    width: 30px;
+    height: 40px;
+}
+
+body {
+    background-color: black;
+}
+
+/* Glow effect */
+#start:hover {
+    box-shadow: 0 0 10px #ffc107, 0 0 20px #ffc107, 0 0 40px #ffc107;
+}
+#stop:hover {
+    box-shadow: 0 0 10px #dc3545, 0 0 20px #dc3545, 0 0 40px #dc3545;
+}
