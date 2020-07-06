@@ -1,30 +1,30 @@
 var arr = [], neighbourArray = [], cnt = 0, interval;
 
 // Creating 2-D array
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < 80; i++) {
     var temp = [];
-    for (var j = 0; j < 12; j++) {
+    for (var j = 0; j < 80; j++) {
         temp.push(0);
     }
     arr.push(temp);
 }
-for (var i = 0; i < 12; i++) {
+for (var i = 0; i < 80; i++) {
     var temp = [];
-    for (var j = 0; j < 12; j++) {
+    for (var j = 0; j < 80; j++) {
         temp.push(0);
     }
     neighbourArray.push(temp);
 }
 
 // Creating grid and adding event listeners for setting initial state
-for (var i=0;i<12;i++) {
-    var row = document.createElement("div");
-    row.setAttribute("class", "row");
+for (var i=0;i<80;i++) {
+    var row = document.createElement("tr");
+    // row.setAttribute("class", "row");
     document.getElementById("game-area").appendChild(row);
     row = document.getElementById("game-area").lastChild;
-    for (var j=0;j<12;j++) {
-        var col = document.createElement("div");
-        col.setAttribute("class", "col-1 border bg-success");
+    for (var j=0;j<80;j++) {
+        var col = document.createElement("td");
+        col.setAttribute("class", "border bg-success");
         col.setAttribute("id", cnt);
         col.addEventListener("click", onClick);
         row.append(col);
@@ -36,7 +36,7 @@ function onClick () {
     var id = this.id;
     $("#" + id).toggleClass("bg-success");
     id = Number(id);
-    var r = Math.floor(id / 12) ,c = id % 12;
+    var r = Math.floor(id / 80) ,c = id % 80;
     if (arr[r][c] === 1) {
         arr[r][c] = 0;
     } else {
@@ -57,10 +57,10 @@ function nextState () {
     // alert("nextState");
     fillNeighbourArray();
     console.log(neighbourArray);
-    for (var i=0;i<12;i++) {
+    for (var i=0;i<80;i++) {
         // alert("Checking");
-        for (var j=0;j<12;j++) {
-            var changeID = i*12 + j;
+        for (var j=0;j<80;j++) {
+            var changeID = i*80 + j;
             // Alive
             if (arr[i][j]) {
                 if (neighbourArray[i][j] < 2 || neighbourArray[i][j] > 3) {
@@ -83,8 +83,8 @@ function nextState () {
 }
 
 function fillNeighbourArray () {
-    for (var i=0;i<12;i++) {
-        for (var j=0;j<12;j++) {
+    for (var i=0;i<80;i++) {
+        for (var j=0;j<80;j++) {
             neighbourArray[i][j] = aliveNeighbours(i, j);
         }
     }
@@ -94,7 +94,7 @@ function fillNeighbourArray () {
 function aliveNeighbours (i, j) {
     var cnt = 0;
     // Padded middle
-    if (i>=1 && i<=10 && j>=1 && j<=10) {
+    if (i>=1 && i<=78 && j>=1 && j<=78) {
         // Top left
         if (arr[i-1][j-1] === 1)
             cnt++;
