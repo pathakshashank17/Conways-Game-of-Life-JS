@@ -1,28 +1,27 @@
 var arr = [], neighbourArray = [], cnt = 0, interval;
 
-// Creating 2-D array
-for (var i = 0; i < 80; i++) {
+// Creating 2-D arrays
+for (var i = 0; i < 50; i++) {
     var temp = [];
-    for (var j = 0; j < 80; j++) {
+    for (var j = 0; j < 50; j++) {
         temp.push(0);
     }
     arr.push(temp);
 }
-for (var i = 0; i < 80; i++) {
+for (var i = 0; i < 50; i++) {
     var temp = [];
-    for (var j = 0; j < 80; j++) {
+    for (var j = 0; j < 50; j++) {
         temp.push(0);
     }
     neighbourArray.push(temp);
 }
 
 // Creating grid and adding event listeners for setting initial state
-for (var i=0;i<80;i++) {
+for (var i=0;i<50;i++) {
     var row = document.createElement("tr");
-    // row.setAttribute("class", "row");
     document.getElementById("game-area").appendChild(row);
     row = document.getElementById("game-area").lastChild;
-    for (var j=0;j<80;j++) {
+    for (var j=0;j<50;j++) {
         var col = document.createElement("td");
         col.setAttribute("class", "border bg-success");
         col.setAttribute("id", cnt);
@@ -32,11 +31,12 @@ for (var i=0;i<80;i++) {
     }
 }
 
+// Action on click
 function onClick () {
     var id = this.id;
     $("#" + id).toggleClass("bg-success");
     id = Number(id);
-    var r = Math.floor(id / 80) ,c = id % 80;
+    var r = Math.floor(id / 50) ,c = id % 50;
     if (arr[r][c] === 1) {
         arr[r][c] = 0;
     } else {
@@ -44,24 +44,22 @@ function onClick () {
     }
 }
 
+// Event listener to start
 $("#start").click(beginGame);
 
 // Starts the game
 function beginGame () {
-    // alert("beginGame");
+    // Calls for a new state every 250ms
     interval = setInterval(nextState, 250);
 }
 
 // Handles the array manipulation
 function nextState () {
-    // alert("nextState");
     fillNeighbourArray();
-    console.log(neighbourArray);
-    for (var i=0;i<80;i++) {
-        // alert("Checking");
-        for (var j=0;j<80;j++) {
-            var changeID = i*80 + j;
-            // Alive
+    for (var i=0;i<50;i++) {
+        for (var j=0;j<50;j++) {
+            var changeID = i*50 + j;
+            // If Alive
             if (arr[i][j]) {
                 if (neighbourArray[i][j] < 2 || neighbourArray[i][j] > 3) {
                     // Now Dead
@@ -69,7 +67,7 @@ function nextState () {
                     $("#" + changeID).toggleClass("bg-success");
                 }
             } 
-            // Dead
+            // If Dead
             else {
                 if (neighbourArray[i][j] === 3) {
                     // Now Alive
@@ -79,22 +77,22 @@ function nextState () {
             }
         }
     }
-    // beginGame();
 }
 
+// Fills the neighbourArray with no. of neighbours for each cell
 function fillNeighbourArray () {
-    for (var i=0;i<80;i++) {
-        for (var j=0;j<80;j++) {
+    for (var i=0;i<50;i++) {
+        for (var j=0;j<50;j++) {
             neighbourArray[i][j] = aliveNeighbours(i, j);
         }
     }
 }
 
-// Return alive neighbours
+// Returns no. of alive neighbours
 function aliveNeighbours (i, j) {
     var cnt = 0;
     // Padded middle
-    if (i>=1 && i<=78 && j>=1 && j<=78) {
+    if (i>=1 && i<=48 && j>=1 && j<=48) {
         // Top left
         if (arr[i-1][j-1] === 1)
             cnt++;
@@ -205,6 +203,7 @@ function aliveNeighbours (i, j) {
     }
 }
 
+// Event listener for stopping the game
 $("#stop").click(function() {
     clearInterval(interval);
 })
