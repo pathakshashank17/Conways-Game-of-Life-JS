@@ -1,11 +1,11 @@
 #game-area {
     margin-top: 2rem;
-    max-width: 720px;
+    max-width: 360px;
 }
 
 td {
     width: 30px;
-    height: 9px;
+    height: 8px;
 }
 
 body {
