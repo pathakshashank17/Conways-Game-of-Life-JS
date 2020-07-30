@@ -11,8 +11,10 @@
 <body>
     <h1 class="text-center text-warning">Conway's Game of Life</h1>
     <table id="game-area" class="container-fluid">
-        <button id="start" type="button" class="btn btn-warning btn-block">Start</button>
-        <button id="stop" type="button" class="btn btn-danger btn-block">Stop</button>
+        <div class="controls">
+            <button id="start" type="button" class="btn btn-outline-success"><i class="fa fa-play" aria-hidden="true"></i></button>
+            <button id="stop" type="button" class="btn btn-outline-danger"><i class="fa fa-pause" aria-hidden="true"></i></button>
+        </div>
     </table>
     <p class="text-center text-warning pt-3">For more info & rules checkout <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of life Wiki</a> or <a href="https://github.com/pathakshashank17/Conways-Game-of-Life-JS">this app's Github repo</a></p>
     <!-- JavaScript(s) -->
