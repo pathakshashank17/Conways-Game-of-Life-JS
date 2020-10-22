@@ -15,64 +15,30 @@ This static app hosts 50 x 50 grid using which one can set the initial state of 
 
 ## Examples
 ### Still life
-<ul>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Game_of_life_block_with_border.svg"/>
-    <br>
-    <em>Block</em>
+<p float="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Game_of_life_block_with_border.svg" width="100" alt="Block" style="padding-right:10px"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Game_of_life_beehive.svg" width="100" alt="Block" style="padding-right:10px"/> 
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Game_of_life_loaf.svg" width="100" alt="Block" style="padding-right:10px"/>
 </p>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Game_of_life_beehive.svg"/>
-    <br>
-    <em>Beehive</em>
-</p>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Game_of_life_loaf.svg"/>
-    <br>
-    <em>Loaf</em>
-</p>
-</ul>
 
 ### Oscillator
-<ul>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Game_of_life_blinker.gif"/>
-    <br>
-    <em>Blinker</em>
+<p float="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Game_of_life_blinker.gif" width="100" alt="Blinker" style="padding-right:10px"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Game_of_life_toad.gif" width="100" alt="Toad" style="padding-right:10px"/> 
+  <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Game_of_life_pulsar.gif" width="100" alt="Pulsar" style="padding-right:10px"/>
 </p>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Game_of_life_toad.gif"/>
-    <br>
-    <em>Toad</em>
-</p>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Game_of_life_pulsar.gif"/>
-    <br>
-    <em>Pulsar</em>
-</p>
-</ul>
 
 ### Spaceships
-<ul>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif"/>
-    <br>
-    <em>Glider</em>
+<p float="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Game_of_life_animated_glider.gif" width="100" alt="Glider" style="padding-right:10px"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Game_of_life_animated_LWSS.gif" width="130" alt="Light Weight Spaceship" style="padding-right:10px"/>
 </p>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Game_of_life_animated_LWSS.gif"/>
-    <br>
-    <em>Light-weight spaceship</em>
-</p>
-</ul>
 
 ### Gun
-<ul>
-<p>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif"/>
-    <br>
-    <em>Gosper's Glider Gun</em>
+<p float="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Gospers_glider_gun.gif" width="250" alt="Gosper's Glider Gun" style="padding-right:10px"/>
 </p>
-</ul>
 
-All info and resources cited from [Wikipedia](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+<p align="center">
+All info and resources cited from <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">Conway's Game of Life</a> on Wikipedia
+</p>
